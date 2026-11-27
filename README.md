@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ SAPA
+# SAPA
 ### Sistem Aduan dan Pendampingan Anti-Bullying Berbasis Website
 
 ![Status](https://img.shields.io/badge/status-in%20development-orange)
