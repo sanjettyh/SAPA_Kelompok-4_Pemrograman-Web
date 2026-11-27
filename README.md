@@ -46,7 +46,7 @@ Proyek ini merupakan tugas kelompok mata kuliah **Pemrograman Web**, Program Stu
 | **Guru BK** | Memvalidasi aduan, menjadwalkan konseling, mencatat tindak lanjut |
 | **Admin** | Mengelola pengguna, kategori, dan konten edukasi; memantau laporan |
 
-## 🧰 Teknologi
+## 🧰 Teknologi yang digunakan
 
 | Komponen | Teknologi |
 |----------|-----------|
