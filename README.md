@@ -3,6 +3,8 @@
 # SAPA
 ### Sistem Aduan dan Pendampingan Anti-Bullying Berbasis Website
 
+**Dosen Pengampu:** Deni Heryanto, A.Md.Kom., ST., M.Kom.
+
 ![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
 ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?logo=chartdotjs&logoColor=white)
@@ -63,5 +65,3 @@ Proyek ini merupakan tugas kelompok mata kuliah **Pemrograman Web**, Program Stu
 | Mochamad Fajar Maulana | 24552011322 |
 | Muhammad Ihsanuddin | 24552011330 |
 | Muhammad Nazriel Zildjian | 24552011331 |
-
-**Dosen Pengampu:** Deni Heryanto, A.Md.Kom., ST., M.Kom.
