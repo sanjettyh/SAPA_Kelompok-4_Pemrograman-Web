@@ -15,11 +15,11 @@
 
 ## 📖 Deskripsi
 
-**SAPA (Sistem Aduan dan Pendampingan Anti-Bullying)** adalah aplikasi web yang memungkinkan siswa melaporkan perundungan (*bullying*) secara **aman dan anonim**, membantu Guru BK mengelola dan memantau penanganan kasus, serta menyediakan **konseling daring** dan **edukasi anti-bullying**.
+SAPA (Sistem Aduan dan Pendampingan Anti-Bullying) adalah aplikasi web yang memungkinkan siswa melaporkan perundungan (*bullying*) secara aman dan anonim, membantu Guru BK mengelola dan memantau penanganan kasus, serta menyediakan konseling daring dan edukasi anti-bullying.
 
-SAPA mengadaptasi pelaporan berbasis tiket dari **LAPOR!** dan konsultasi daring dari **Halodoc**, sehingga korban mendapat jalur **keadilan** (pelaporan) sekaligus **pemulihan** (pendampingan psikologis) dalam satu platform.
+SAPA mengadaptasi pelaporan berbasis tiket dari LAPOR! dan konsultasi daring dari Halodoc, sehingga korban mendapat jalur keadilan (pelaporan) sekaligus pemulihan (pendampingan psikologis) dalam satu platform.
 
-Proyek ini merupakan tugas kelompok mata kuliah **Pemrograman Web**, Program Studi Teknik Informatika, Universitas Teknologi Bandung.
+Proyek ini merupakan tugas kelompok mata kuliah Pemrograman Web, Program Studi Teknik Informatika, Universitas Teknologi Bandung.
 
 ## ❗ Masalah yang Diselesaikan
 
