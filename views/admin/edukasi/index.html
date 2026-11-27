@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konten Edukasi Admin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="edukasi.css">
+</head>
+<body data-page="edukasi" data-title="Konten Edukasi">
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+        <div id="navbar-container"></div>
+
+        <section class="content-title">
+            <h2>Manajemen Konten Edukasi</h2>
+            <p>Buat dan kelola artikel, video, serta poster edukasi anti-bullying.</p>
+        </section>
+
+        <section class="education-stats" aria-label="Ringkasan konten edukasi">
+            <article class="education-stat">
+                <span>Total Konten</span>
+                <strong id="totalContents">0</strong>
+            </article>
+            <article class="education-stat">
+                <span>Published</span>
+                <strong id="publishedContents">0</strong>
+            </article>
+            <article class="education-stat">
+                <span>Draft</span>
+                <strong id="draftContents">0</strong>
+            </article>
+            <article class="education-stat">
+                <span>Artikel</span>
+                <strong id="articleContents">0</strong>
+            </article>
+        </section>
+
+        <section class="education-panel">
+            <div class="education-toolbar">
+                <div>
+                    <h3>Daftar Konten</h3>
+                    <p id="contentCount">0 konten</p>
+                </div>
+                <button class="education-primary-button" id="addContentButton" type="button">
+                    + Tambah Konten
+                </button>
+            </div>
+
+            <div class="education-filters">
+                <label class="education-search">
+                    <span class="visually-hidden">Cari konten</span>
+                    <input id="searchContents" type="search" placeholder="Cari judul, slug, atau isi konten...">
+                </label>
+                <label>
+                    <span class="visually-hidden">Filter jenis konten</span>
+                    <select id="filterType">
+                        <option value="">Semua Jenis</option>
+                        <option value="artikel">Artikel</option>
+                        <option value="video">Video</option>
+                        <option value="poster">Poster</option>
+                    </select>
+                </label>
+                <label>
+                    <span class="visually-hidden">Filter status konten</span>
+                    <select id="filterStatus">
+                        <option value="">Semua Status</option>
+                        <option value="draft">Draft</option>
+                        <option value="published">Published</option>
+                    </select>
+                </label>
+                <button class="education-secondary-button" id="resetFilters" type="button">Reset</button>
+            </div>
+
+            <div class="education-table-wrap">
+                <table class="education-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Judul</th>
+                            <th scope="col">Jenis</th>
+                            <th scope="col">Penulis</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Diperbarui</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contentTable"></tbody>
+                </table>
+            </div>
+            <p class="education-summary" id="contentSummary" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <div class="education-modal-backdrop" id="contentModal" hidden>
+        <section class="education-modal" role="dialog" aria-modal="true" aria-labelledby="contentModalTitle">
+            <div class="education-modal-heading">
+                <div>
+                    <h2 id="contentModalTitle">Tambah Konten</h2>
+                    <p>Lengkapi materi edukasi yang akan dikelola.</p>
+                </div>
+                <button class="education-close-button" id="closeContentModal" type="button" aria-label="Tutup">×</button>
+            </div>
+
+            <form id="contentForm">
+                <input id="contentId" type="hidden">
+                <label>
+                    Judul
+                    <input id="contentTitle" type="text" maxlength="200" required>
+                </label>
+                <label>
+                    Slug
+                    <input id="contentSlug" type="text" maxlength="220" required>
+                    <small>Alamat unik untuk konten. Dibuat otomatis dari judul, tetapi bisa diubah.</small>
+                </label>
+                <div class="education-form-columns">
+                    <label>
+                        Jenis konten
+                        <select id="contentType" required>
+                            <option value="artikel">Artikel</option>
+                            <option value="video">Video</option>
+                            <option value="poster">Poster</option>
+                        </select>
+                    </label>
+                    <label>
+                        Status
+                        <select id="contentStatus" required>
+                            <option value="draft">Draft</option>
+                            <option value="published">Published</option>
+                        </select>
+                    </label>
+                </div>
+                <label>
+                    Penulis <span class="education-optional-label">(opsional)</span>
+                    <select id="contentAuthor"></select>
+                </label>
+                <label>
+                    Isi konten <span class="education-optional-label">(opsional untuk video/poster)</span>
+                    <textarea id="contentBody" rows="8"></textarea>
+                </label>
+                <label>
+                    URL media <span class="education-optional-label">(opsional)</span>
+                    <input id="contentMediaUrl" type="url" maxlength="500" placeholder="https://...">
+                </label>
+                <label>
+                    URL thumbnail <span class="education-optional-label">(opsional)</span>
+                    <input id="contentThumbnail" type="url" maxlength="500" placeholder="https://...">
+                </label>
+                <p class="education-form-error" id="contentFormError" role="alert" hidden></p>
+                <div class="education-modal-actions">
+                    <button class="education-secondary-button" id="cancelContent" type="button">Batal</button>
+                    <button class="education-primary-button" type="submit">Simpan Konten</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script type="module" src="../app.js"></script>
+    <script src="edukasi.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.handling-toolbar {
+    align-items: center;
+}
+
+.handling-table td:first-child {
+    min-width: 195px;
+}
+
+.handling-table td:nth-child(2) {
+    min-width: 130px;
+}
+
+.handling-table td:nth-child(5) {
+    min-width: 190px;
+}
+
+.handling-modal .guru-dialog {
+    width: min(100%, 660px);
+}

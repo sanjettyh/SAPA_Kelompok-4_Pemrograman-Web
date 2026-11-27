@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Laporan | Guru BK</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="laporan.css">
+</head>
+<body data-depth="1" data-page="laporan" data-title="Data Laporan">
+    <div id="sidebar-container"></div>
+    <main class="guru-main">
+        <div id="navbar-container"></div>
+        <section class="guru-page-heading"><h2>Data Laporan</h2><p>Tinjau laporan masuk dan buka detail untuk menentukan tindak lanjut.</p></section>
+        <section class="guru-panel">
+            <div class="guru-toolbar report-toolbar">
+                <label class="guru-search"><span class="guru-visually-hidden">Cari laporan</span><input id="reportSearch" type="search" placeholder="Cari kode, pelapor, kategori, atau lokasi..."></label>
+                <label><span class="guru-visually-hidden">Filter status</span><select id="reportStatusFilter" class="guru-input"><option value="">Semua Status</option><option value="menunggu">Menunggu</option><option value="diverifikasi">Diverifikasi</option><option value="diproses">Diproses</option><option value="pendampingan">Pendampingan</option><option value="selesai">Selesai</option><option value="ditolak">Ditolak</option></select></label>
+                <button class="guru-secondary-button" id="resetReportFilters" type="button">Reset</button>
+            </div>
+            <div class="guru-table-wrap">
+                <table class="guru-table report-table"><thead><tr><th>Kode</th><th>Pelapor</th><th>Kategori</th><th>Tanggal</th><th>Lokasi</th><th>Status</th><th>Detail</th></tr></thead><tbody id="reportTable"></tbody></table>
+            </div>
+            <p class="guru-summary" id="reportSummary" aria-live="polite"></p>
+        </section>
+    </main>
+    <div class="guru-modal report-modal" id="reportModal" hidden>
+        <section class="guru-dialog" role="dialog" aria-modal="true" aria-labelledby="reportModalTitle">
+            <div class="guru-dialog-heading"><div><h2 id="reportModalTitle">Detail Laporan</h2><p id="reportModalCode"></p></div><button class="guru-close-button" id="closeReportModal" type="button" aria-label="Tutup">×</button></div>
+            <dl class="guru-modal-details report-detail-copy" id="reportDetails"></dl>
+            <div class="guru-modal-actions"><button class="guru-secondary-button" id="dismissReportModal" type="button">Tutup</button></div>
+        </section>
+    </div>
+    <script type="module" src="../app.js"></script>
+    <script type="module" src="laporan.js"></script>
+</body>
+</html>

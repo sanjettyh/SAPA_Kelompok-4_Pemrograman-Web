@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Siswa | Sahabat Sekolah</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body data-auth-page="register">
+    <main class="auth-layout">
+        <section class="auth-intro">
+            <a class="auth-brand" href="../index.html"><span class="auth-brand-icon">S</span><span>S A P A</span></a>
+            <div class="auth-intro-copy">
+                <span class="auth-eyebrow">SISTEM ADUAN DAN PENDAMPINGAN</span>
+                <h1>Kamu berhak merasa aman, didengar, dan didukung.</h1>
+                <p>Buat akun Siswa untuk mengakses laporan dan materi edukasi.</p>
+            </div>
+            <div class="auth-intro-footer">Demo lokal · Data disimpan di browser ini</div>
+        </section>
+
+        <section class="auth-content">
+            <div class="auth-card">
+                <div class="auth-card-heading">
+                    <span class="auth-eyebrow">BUAT AKUN</span>
+                    <h2>Daftar sebagai Siswa</h2>
+                    <p>Pendaftaran mandiri hanya tersedia untuk role Siswa.</p>
+                </div>
+
+                <form id="registerForm" class="auth-form">
+                    <label for="registerName">Nama lengkap</label>
+                    <input id="registerName" type="text" maxlength="100" autocomplete="name" required placeholder="Nama lengkap">
+
+                    <label for="registerEmail">Email</label>
+                    <input id="registerEmail" type="email" maxlength="100" autocomplete="email" required placeholder="nama@email.com">
+
+                    <label for="registerPhone">Nomor telepon <span class="auth-optional">(opsional)</span></label>
+                    <input id="registerPhone" type="tel" maxlength="20" autocomplete="tel" placeholder="08xxxxxxxxxx">
+
+                    <label for="registerPassword">Password</label>
+                    <input id="registerPassword" type="password" minlength="8" autocomplete="new-password" required placeholder="Minimal 8 karakter">
+
+                    <label for="registerPasswordConfirm">Ulangi password</label>
+                    <input id="registerPasswordConfirm" type="password" minlength="8" autocomplete="new-password" required placeholder="Masukkan ulang password">
+
+                    <p id="registerError" class="auth-error" role="alert" hidden></p>
+                    <button class="auth-submit" id="registerSubmit" type="submit">Buat Akun Siswa</button>
+                </form>
+
+                <p class="auth-switch">Sudah punya akun? <a href="index.html">Masuk</a></p>
+                <p class="auth-disclaimer">Password di-hash sebelum disimpan, tetapi localStorage tetap hanya untuk demo. Jangan gunakan password asli.</p>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

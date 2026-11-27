@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya | Guru BK</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body data-depth="1" data-page="profile" data-title="Profil Saya">
+    <div id="sidebar-container"></div>
+    <main class="guru-main">
+        <div id="navbar-container"></div>
+        <section class="guru-page-heading">
+            <h2>Profil Guru BK</h2>
+            <p>Periksa dan perbarui informasi akun Guru BK yang sedang aktif.</p>
+        </section>
+        <section class="guru-panel guru-profile-panel">
+            <div class="guru-profile-banner">
+                <div class="guru-profile-avatar" id="profileAvatar" aria-hidden="true">G</div>
+                <div>
+                    <h2 id="profileDisplayName">Guru BK</h2>
+                    <p>Guru Bimbingan dan Konseling</p>
+                </div>
+            </div>
+            <form class="guru-form guru-profile-form" id="profileForm">
+                <h3>Informasi Pribadi</h3>
+                <label for="profileName">Nama lengkap
+                    <input id="profileName" name="name" type="text" autocomplete="name" required>
+                </label>
+                <label for="profileEmail">Email
+                    <input id="profileEmail" name="email" type="email" autocomplete="email" required>
+                </label>
+                <label for="profilePhone">Nomor telepon
+                    <input id="profilePhone" name="phone" type="tel" autocomplete="tel" placeholder="Masukkan nomor telepon">
+                </label>
+                <p class="guru-profile-message" id="profileMessage" role="status" aria-live="polite" hidden></p>
+                <div class="guru-profile-actions">
+                    <button class="guru-button" type="submit">Simpan Perubahan</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahabat Sekolah | Ruang Aman Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/navbar.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="dashboard/dashboard.css">
+    <link rel="stylesheet" href="dashboard/public-dashboard.css">
+</head>
+
+<body data-root="." data-public="true">
+    <div id="navbarMount"></div>
+    <main class="main-content public-dashboard">
+        <section class="public-hero">
+            <div class="public-hero-copy">
+                <span class="eyebrow">RUANG AMAN SEKOLAH</span>
+                <h1>Setiap siswa berhak <span>aman dan didengar.</span></h1>
+                <p>
+                    Bullying masih sering terjadi di sekolah. Oleh karena itu, diperlukan sistem berbasis website untuk
+                    mempermudah pelaporan, pemantauan, dan penanganan kasus bullying.
+                </p>
+                <div class="public-hero-actions">
+                    <a class="button button-primary" href="../auth/index.html?role=siswa">Masuk sebagai Siswa</a>
+                    <a class="button button-light" href="../auth/register.html">Buat Akun Siswa</a>
+                </div>
+                <small class="public-guest-note">Sudah masuk? Pilih Dashboard di menu.</small>
+            </div>
+            <div class="public-hero-art" aria-hidden="true">
+                <div class="public-shield">♡</div>
+                <strong>Kamu tidak<br>sendirian.</strong>
+                <span>Berani bicara adalah langkah pertama.</span>
+            </div>
+        </section>
+
+        <section class="public-section">
+            <div class="public-section-heading">
+                <div><span class="eyebrow">DUKUNGAN UNTUKMU</span>
+                    <h2>Apa yang bisa kamu lakukan?</h2>
+                </div>
+                <p>Gunakan portal siswa untuk mengakses layanan yang aman dan suportif.</p>
+            </div>
+            <div class="public-feature-grid">
+                <article class="public-feature-card">
+                    <span class="public-feature-icon purple">＋</span>
+                    <h3>Sampaikan Laporan</h3>
+                    <p>Ceritakan kejadian yang kamu alami atau saksikan. Kamu juga dapat memilih untuk menyamarkan
+                        identitas.</p>
+                    <a href="../auth/index.html?role=siswa">Masuk untuk melapor →</a>
+                </article>
+                <article class="public-feature-card">
+                    <span class="public-feature-icon blue">▤</span>
+                    <h3>Pantau Tindak Lanjut</h3>
+                    <p>Lihat status laporan dan catatan perkembangan setelah masuk ke akun siswa.</p>
+                    <a href="../auth/index.html?role=siswa">Lihat laporan saya →</a>
+                </article>
+                <article class="public-feature-card">
+                    <span class="public-feature-icon green">♡</span>
+                    <h3>Dapatkan Dukungan</h3>
+                    <p>Pelajari materi anti-bullying atau hubungi Guru BK untuk memperoleh pendampingan.</p>
+                    <a href="edukasi/index.html">Buka edukasi →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="public-help-banner">
+            <div><span class="eyebrow">KAMU PANTAS MERASA AMAN</span>
+                <h2>Butuh bantuan? Jangan hadapi sendiri.</h2>
+                <p>Hubungi Guru BK atau orang dewasa yang kamu percaya. Jika kamu dalam bahaya, segera cari bantuan
+                    langsung.</p>
+            </div>
+            <a class="button button-primary" href="edukasi/index.html">Pelajari cara mencari bantuan</a>
+        </section>
+        <div id="footerMount"></div>
+    </main>
+    <script src="app.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+</body>
+
+</html>

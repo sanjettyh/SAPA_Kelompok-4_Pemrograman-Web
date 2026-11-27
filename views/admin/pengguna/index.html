@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengguna Admin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="pengguna.css">
+</head>
+<body data-page="pengguna" data-title="Pengguna">
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+        <div id="navbar-container"></div>
+
+        <section class="content-title">
+            <h2>Manajemen Pengguna</h2>
+            <p>Kelola data siswa, guru BK, psikolog, dan admin.</p>
+        </section>
+
+        <section class="user-panel">
+            <div class="user-toolbar">
+                <div>
+                    <h3>Daftar Pengguna</h3>
+                    <p>Kelola informasi dan peran setiap pengguna.</p>
+                </div>
+                <button class="primary-button" id="addUserButton" type="button">
+                    + Tambah Pengguna
+                </button>
+            </div>
+
+            <div class="user-filters">
+                <label class="search-field">
+                    <span class="visually-hidden">Cari pengguna</span>
+                    <input id="searchUsers" type="search" placeholder="Cari nama, email, atau telepon...">
+                </label>
+                <label>
+                    <span class="visually-hidden">Filter berdasarkan role</span>
+                    <select id="filterRole">
+                        <option value="">Semua Role</option>
+                        <option value="siswa">Siswa</option>
+                        <option value="guru_bk">Guru BK</option>
+                        <option value="psikolog">Psikolog</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </label>
+                <button class="secondary-button" id="resetFilters" type="button">Reset</button>
+            </div>
+
+            <div class="table-wrap">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Telepon</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Dibuat</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable"></tbody>
+                </table>
+            </div>
+            <p class="table-summary" id="tableSummary" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <div class="modal-backdrop" id="userModal" hidden>
+        <section class="user-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-heading">
+                <div>
+                    <h2 id="modalTitle">Tambah Pengguna</h2>
+                    <p>Isi informasi akun pengguna di bawah ini.</p>
+                </div>
+                <button class="close-button" id="closeModalButton" type="button" aria-label="Tutup">×</button>
+            </div>
+
+            <form id="userForm">
+                <input id="userId" type="hidden">
+                <label>
+                    Nama lengkap
+                    <input id="userName" name="name" type="text" maxlength="100" autocomplete="name" required>
+                </label>
+                <label>
+                    Email
+                    <input id="userEmail" name="email" type="email" maxlength="100" autocomplete="email" required>
+                </label>
+                <label>
+                    Nomor telepon <span class="optional-label">(opsional)</span>
+                    <input id="userPhone" name="phone" type="tel" maxlength="20" autocomplete="tel">
+                </label>
+                <label>
+                    Role
+                    <select id="userRole" name="role" required>
+                        <option value="siswa">Siswa</option>
+                        <option value="guru_bk">Guru BK</option>
+                        <option value="psikolog">Psikolog</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </label>
+                <label>
+                    <span id="passwordLabel">Password</span>
+                    <input id="userPassword" name="password" type="password" minlength="8" autocomplete="new-password">
+                    <small id="passwordHint">Minimal 8 karakter. Password di-hash sebelum disimpan di browser.</small>
+                </label>
+                <p class="form-error" id="formError" role="alert" hidden></p>
+                <div class="modal-actions">
+                    <button class="secondary-button" id="cancelButton" type="button">Batal</button>
+                    <button class="primary-button" type="submit">Simpan Pengguna</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script type="module" src="../app.js"></script>
+    <script src="pengguna.js"></script>
+</body>
+</html>

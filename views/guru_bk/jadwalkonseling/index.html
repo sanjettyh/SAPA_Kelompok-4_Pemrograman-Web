@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Konseling | Guru BK</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="jadwalkonseling.css">
+</head>
+<body data-depth="1" data-page="konseling" data-title="Jadwal Konseling">
+    <div id="sidebar-container"></div>
+    <main class="guru-main">
+        <div id="navbar-container"></div>
+        <section class="guru-page-heading"><h2>Jadwal Konseling</h2><p>Kelola jadwal sesi tatap muka atau online untuk kasus yang ditangani.</p></section>
+        <section class="guru-panel">
+            <div class="guru-toolbar session-toolbar">
+                <label class="guru-search"><span class="guru-visually-hidden">Cari jadwal</span><input id="sessionSearch" type="search" placeholder="Cari nama siswa atau laporan..."></label>
+                <label><span class="guru-visually-hidden">Filter status</span><select id="sessionFilter" class="guru-input"><option value="">Semua Status</option><option value="dijadwalkan">Dijadwalkan</option><option value="selesai">Selesai</option><option value="dibatalkan">Dibatalkan</option></select></label>
+                <button class="guru-secondary-button" id="resetSessionFilters" type="button">Reset</button>
+                <button class="guru-button" id="addSession" type="button">+ Jadwalkan Sesi</button>
+            </div>
+            <div class="guru-table-wrap"><table class="guru-table session-table"><thead><tr><th>Waktu</th><th>Siswa</th><th>Laporan</th><th>Jenis</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="sessionTable"></tbody></table></div>
+            <p class="guru-summary" id="sessionSummary" aria-live="polite"></p>
+        </section>
+    </main>
+    <div class="guru-modal session-modal" id="sessionModal" hidden>
+        <section class="guru-dialog" role="dialog" aria-modal="true" aria-labelledby="sessionModalTitle">
+            <div class="guru-dialog-heading"><div><h2 id="sessionModalTitle">Jadwalkan Konseling</h2><p>Pilih kasus yang sudah terdaftar pada penanganan.</p></div><button class="guru-close-button" id="closeSession" type="button" aria-label="Tutup">×</button></div>
+            <form class="guru-form" id="sessionForm">
+                <input id="sessionId" type="hidden">
+                <label>Penanganan kasus<select id="sessionHandling" required></select></label>
+                <label>Siswa<select id="sessionStudent"></select></label>
+                <label>Tanggal dan waktu<input id="sessionDate" type="datetime-local" required></label>
+                <div class="guru-form-columns">
+                    <label>Jenis sesi<select id="sessionType" required><option value="tatap_muka">Tatap muka</option><option value="online">Online</option></select></label>
+                    <label>Status sesi<select id="sessionStatus" required><option value="dijadwalkan">Dijadwalkan</option><option value="selesai">Selesai</option><option value="dibatalkan">Dibatalkan</option></select></label>
+                </div>
+                <label>Catatan<textarea id="sessionNotes" rows="4"></textarea></label>
+                <p class="guru-form-error" id="sessionError" role="alert" hidden></p>
+                <div class="guru-modal-actions"><button class="guru-secondary-button" id="cancelSession" type="button">Batal</button><button class="guru-button" type="submit">Simpan Jadwal</button></div>
+            </form>
+        </section>
+    </div>
+    <script type="module" src="../app.js"></script>
+    <script type="module" src="jadwalkonseling.js"></script>
+</body>
+</html>

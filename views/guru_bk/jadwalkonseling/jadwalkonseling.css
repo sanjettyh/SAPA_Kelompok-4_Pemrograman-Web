@@ -1,0 +1,21 @@
+.session-toolbar {
+    align-items: center;
+}
+
+.session-table td:first-child {
+    min-width: 165px;
+    white-space: nowrap;
+}
+
+.session-table td:nth-child(2),
+.session-table td:nth-child(3) {
+    min-width: 130px;
+}
+
+.session-modal .guru-dialog {
+    width: min(100%, 620px);
+}
+
+.session-modal input[type="datetime-local"] {
+    min-width: 0;
+}

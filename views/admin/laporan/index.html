@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Laporan Admin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="laporan.css">
+</head>
+<body data-page="laporan" data-title="Data Laporan">
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+        <div id="navbar-container"></div>
+
+        <section class="content-title">
+            <h2>Manajemen Data Laporan</h2>
+            <p>Tinjau laporan bullying dan kelola tindak lanjutnya.</p>
+        </section>
+
+        <section class="report-stats" aria-label="Ringkasan laporan">
+            <article class="report-stat">
+                <span>Total Laporan</span>
+                <strong id="totalReports">0</strong>
+            </article>
+            <article class="report-stat">
+                <span>Menunggu</span>
+                <strong id="waitingReports">0</strong>
+            </article>
+            <article class="report-stat">
+                <span>Diproses</span>
+                <strong id="processingReports">0</strong>
+            </article>
+            <article class="report-stat">
+                <span>Selesai</span>
+                <strong id="completedReports">0</strong>
+            </article>
+        </section>
+
+        <section class="report-panel">
+            <div class="report-toolbar">
+                <div>
+                    <h3>Daftar Laporan</h3>
+                    <p>Gunakan pencarian dan filter untuk menemukan laporan.</p>
+                </div>
+                <button class="report-primary-button" id="addReportButton" type="button">
+                    + Tambah Laporan
+                </button>
+            </div>
+
+            <div class="report-filters">
+                <label class="report-search">
+                    <span class="visually-hidden">Cari laporan</span>
+                    <input id="searchReports" type="search" placeholder="Cari kode, pelapor, kategori, atau lokasi...">
+                </label>
+                <label>
+                    <span class="visually-hidden">Filter status</span>
+                    <select id="filterStatus">
+                        <option value="">Semua Status</option>
+                        <option value="menunggu">Menunggu</option>
+                        <option value="diverifikasi">Diverifikasi</option>
+                        <option value="diproses">Diproses</option>
+                        <option value="pendampingan">Pendampingan</option>
+                        <option value="selesai">Selesai</option>
+                        <option value="ditolak">Ditolak</option>
+                    </select>
+                </label>
+                <label>
+                    <span class="visually-hidden">Filter tanggal kejadian</span>
+                    <input id="filterDate" type="date">
+                </label>
+                <button class="report-secondary-button" id="resetFilters" type="button">Reset</button>
+            </div>
+
+            <div class="report-table-wrap">
+                <table class="report-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Kode</th>
+                            <th scope="col">Pelapor</th>
+                            <th scope="col">Kategori</th>
+                            <th scope="col">Tanggal Kejadian</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportTable"></tbody>
+                </table>
+            </div>
+            <p class="report-summary" id="reportSummary" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <div class="report-modal-backdrop" id="reportModal" hidden>
+        <section class="report-modal" role="dialog" aria-modal="true" aria-labelledby="reportModalTitle">
+            <div class="report-modal-heading">
+                <div>
+                    <h2 id="reportModalTitle">Tambah Laporan</h2>
+                    <p>Lengkapi detail laporan di bawah ini.</p>
+                </div>
+                <button class="report-close-button" id="closeReportModal" type="button" aria-label="Tutup">×</button>
+            </div>
+
+            <form id="reportForm">
+                <input id="reportId" type="hidden">
+                <label>
+                    Kode laporan
+                    <input id="reportCode" type="text" readonly>
+                    <small>Kode dibuat otomatis dan unik.</small>
+                </label>
+                <label>
+                    Pelapor <span class="report-optional-label">(opsional)</span>
+                    <select id="reporterId"></select>
+                </label>
+                <label class="report-checkbox">
+                    <input id="isAnonymous" type="checkbox">
+                    Identitas pelapor disamarkan
+                </label>
+                <label>
+                    Kategori bullying
+                    <select id="categoryId" required></select>
+                </label>
+                <div class="report-form-columns">
+                    <label>
+                        Tanggal kejadian
+                        <input id="incidentDate" type="date" required>
+                    </label>
+                    <label>
+                        Status
+                        <select id="reportStatus" required>
+                            <option value="menunggu">Menunggu</option>
+                            <option value="diverifikasi">Diverifikasi</option>
+                            <option value="diproses">Diproses</option>
+                            <option value="pendampingan">Pendampingan</option>
+                            <option value="selesai">Selesai</option>
+                            <option value="ditolak">Ditolak</option>
+                        </select>
+                    </label>
+                </div>
+                <label>
+                    Lokasi kejadian
+                    <input id="incidentLocation" type="text" maxlength="255" required>
+                </label>
+                <label>
+                    Kronologi / deskripsi
+                    <textarea id="reportDescription" rows="5" required></textarea>
+                </label>
+                <p class="report-form-error" id="reportFormError" role="alert" hidden></p>
+                <div class="report-modal-actions">
+                    <button class="report-secondary-button" id="cancelReport" type="button">Batal</button>
+                    <button class="report-primary-button" type="submit">Simpan Laporan</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <div class="report-modal-backdrop" id="detailModal" hidden>
+        <section class="report-modal report-detail-modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+            <div class="report-modal-heading">
+                <div>
+                    <h2 id="detailTitle">Detail Laporan</h2>
+                    <p id="detailCode"></p>
+                </div>
+                <button class="report-close-button" id="closeDetailModal" type="button" aria-label="Tutup">×</button>
+            </div>
+            <dl class="report-details" id="reportDetails"></dl>
+            <div class="report-modal-actions">
+                <button class="report-secondary-button" id="closeDetailButton" type="button">Tutup</button>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="../app.js"></script>
+    <script src="laporan.js"></script>
+</body>
+</html>

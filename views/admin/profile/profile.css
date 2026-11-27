@@ -1,0 +1,122 @@
+.profile-panel {
+    max-width: 760px;
+    overflow: hidden;
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px;
+    background: #eff6ff;
+}
+
+.profile-header .profile-avatar {
+    display: grid;
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.profile-header h2 {
+    margin: 0 0 5px;
+    color: #202938;
+    font-size: 17px;
+}
+
+.profile-header p {
+    margin: 0;
+    color: #647084;
+    font-size: 13px;
+}
+
+.profile-form {
+    display: flex;
+    max-width: 560px;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px;
+}
+
+.profile-form h3 {
+    margin: 0 0 2px;
+    font-size: 16px;
+}
+
+.profile-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-form input {
+    min-height: 40px;
+    padding: 9px 11px;
+    border: 1px solid #d8dde6;
+    border-radius: 7px;
+    background: #fff;
+    color: #252b36;
+    font: inherit;
+    font-size: 13px;
+}
+
+.profile-form input:focus {
+    border-color: #2563eb;
+    outline: 3px solid rgb(37 99 235 / 14%);
+}
+
+.profile-message {
+    margin: 0;
+    color: #166534;
+    font-size: 13px;
+}
+
+.profile-message.error {
+    color: #b91c1c;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-save-button {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-save-button:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 460px) {
+    .profile-header,
+    .profile-form {
+        padding: 17px;
+    }
+
+    .profile-actions,
+    .profile-save-button {
+        width: 100%;
+    }
+}

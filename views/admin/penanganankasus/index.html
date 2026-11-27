@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penanganan Kasus Admin</title>
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../local-data.css">
+    <link rel="stylesheet" href="penanganankasus.css">
+</head>
+<body data-page="penanganan" data-title="Penanganan Kasus">
+    <div id="sidebar-container"></div>
+    <main class="main-content">
+        <div id="navbar-container"></div>
+        <section class="content-title">
+            <h2>Penanganan Kasus</h2>
+            <p>Catat tindak lanjut dan pendampingan untuk setiap laporan.</p>
+        </section>
+        <section class="local-data-panel">
+            <div class="local-data-toolbar">
+                <div><h3>Daftar Penanganan</h3><p id="handlingCount"></p></div>
+                <button class="local-data-primary" id="addHandling" type="button">+ Tambah Penanganan</button>
+            </div>
+            <div class="local-data-filters">
+                <label class="local-data-search"><span class="local-data-visually-hidden">Cari penanganan</span><input id="handlingSearch" type="search" placeholder="Cari kode laporan atau konselor..."></label>
+                <label><span class="local-data-visually-hidden">Filter status</span><select id="handlingFilter"><option value="">Semua Status</option><option value="belum_ditangani">Belum ditangani</option><option value="sedang_ditangani">Sedang ditangani</option><option value="selesai">Selesai</option></select></label>
+                <button class="local-data-secondary" id="resetHandlingFilters" type="button">Reset</button>
+            </div>
+            <div class="local-data-table-wrap">
+                <table class="local-data-table">
+                    <thead><tr><th>Laporan</th><th>Konselor</th><th>Tanggal</th><th>Status</th><th>Aksi</th></tr></thead>
+                    <tbody id="handlingTable"></tbody>
+                </table>
+            </div>
+            <p class="local-data-summary" id="handlingSummary" aria-live="polite"></p>
+        </section>
+    </main>
+    <div class="local-data-modal" id="handlingModal" hidden>
+        <section class="local-data-dialog" role="dialog" aria-modal="true" aria-labelledby="handlingModalTitle">
+            <div class="local-data-dialog-heading"><div><h2 id="handlingModalTitle">Tambah Penanganan</h2><p>Masukkan detail tindak lanjut kasus.</p></div><button class="local-data-close" id="closeHandling" type="button" aria-label="Tutup">×</button></div>
+            <form class="local-data-form" id="handlingForm">
+                <input id="handlingId" type="hidden">
+                <label>Laporan<select id="handlingReport" required></select></label>
+                <label>Konselor (Guru BK)<select id="handlingCounselor" required></select></label>
+                <div class="local-data-columns">
+                    <label>Tanggal penanganan<input id="handlingDate" type="date"></label>
+                    <label>Status<select id="handlingStatus" required><option value="belum_ditangani">Belum ditangani</option><option value="sedang_ditangani">Sedang ditangani</option><option value="selesai">Selesai</option></select></label>
+                </div>
+                <label>Tindakan yang dilakukan<textarea id="actionTaken" rows="4"></textarea></label>
+                <label>Tindak lanjut<textarea id="followUp" rows="4"></textarea></label>
+                <p class="local-data-error" id="handlingError" role="alert" hidden></p>
+                <div class="local-data-modal-actions"><button class="local-data-secondary" id="cancelHandling" type="button">Batal</button><button class="local-data-primary" type="submit">Simpan</button></div>
+            </form>
+        </section>
+    </div>
+    <script type="module" src="../app.js"></script>
+    <script src="penanganankasus.js"></script>
+</body>
+</html>

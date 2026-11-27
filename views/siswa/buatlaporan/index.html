@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Laporan | Sahabat Sekolah</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="buatlaporan.css">
+</head>
+
+<body data-root="..">
+
+    <div id="navbarMount"></div>
+
+    <main class="main-content">
+
+        <div class="page-heading">
+            <span class="eyebrow">RUANG AMAN SEKOLAH</span>
+            <h1>Buat Laporan</h1>
+            <p>Sampaikan kejadian yang kamu alami atau saksikan dengan aman.</p>
+        </div>
+
+        <div class="form-layout">
+
+            <form class="card form-card" id="reportForm">
+
+                <h2>Formulir Laporan Bullying</h2>
+
+                <p class="form-subtitle">
+                    Isi informasi berikut sesuai kejadian yang kamu ketahui.
+                </p>
+
+                <label for="reportTitle">Judul laporan *</label>
+                <input type="text" id="reportTitle" maxlength="150"
+                       required placeholder="Contoh: Ejekan berulang di kelas">
+
+                <label for="reportCategory">Kategori bullying *</label>
+                <select id="reportCategory" required>
+                    <option value="">Pilih kategori</option>
+                    <option value="Verbal">Verbal</option>
+                    <option value="Fisik">Fisik</option>
+                    <option value="Sosial">Sosial</option>
+                    <option value="Siber">Siber</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+
+                <div class="two-columns">
+
+                    <div>
+                        <label for="incidentDate">Tanggal kejadian</label>
+                        <input type="date" id="incidentDate">
+                    </div>
+
+                    <div>
+                        <label for="incidentLocation">Lokasi kejadian</label>
+                        <input type="text" id="incidentLocation"
+                               placeholder="Contoh: Area kantin">
+                    </div>
+
+                </div>
+
+                <label for="reportDescription">Kronologi kejadian *</label>
+                <textarea id="reportDescription" rows="6"
+                          required placeholder="Ceritakan apa yang terjadi..."></textarea>
+
+                <label for="reportEvidence">Bukti pendukung (opsional)</label>
+                <input type="file" id="reportEvidence"
+                       accept="image/*,.pdf">
+
+                <small class="field-hint">
+                    Demo lokal hanya menyimpan nama file, bukan isi bukti.
+                </small>
+
+                <label class="checkbox-line">
+                    <input type="checkbox" id="anonymousReport">
+                    Saya ingin identitas saya disamarkan.
+                </label>
+
+                <div class="form-actions">
+                    <button class="button button-light" type="reset">
+                        Kosongkan
+                    </button>
+
+                    <button class="button button-primary" type="submit">
+                        Kirim Laporan →
+                    </button>
+                </div>
+
+            </form>
+
+            <aside class="card safety-card">
+
+                <span class="safety-icon">♡</span>
+
+                <h3>Laporanmu penting</h3>
+
+                <p>Beberapa hal yang perlu diingat:</p>
+
+                <ul>
+                    <li>Ceritakan kejadian dengan jujur dan jelas.</li>
+                    <li>Jangan sebarkan identitas pihak terkait ke publik.</li>
+                    <li>Guru BK dapat menghubungimu untuk tindak lanjut.</li>
+                    <li>Jika dalam bahaya, segera cari bantuan orang dewasa.</li>
+                </ul>
+
+                <div class="privacy-box">
+                    <strong>Privasi dijaga</strong>
+                    <span>
+                        Ini masih demo lokal dan belum mengirim laporan ke sekolah.
+                    </span>
+                </div>
+
+            </aside>
+
+        </div>
+
+        <div id="footerMount"></div>
+
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="../app.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="buatlaporan.js"></script>
+
+</body>
+</html>

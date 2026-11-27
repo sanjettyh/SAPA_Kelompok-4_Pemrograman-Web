@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body data-page="dashboard" data-title="Dashboard">
+
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+
+        <div id="navbar-container"></div>
+
+        <section class="content-title">
+            <h2>Dashboard Admin</h2>
+            <p>Selamat datang di halaman administrasi sistem pelaporan bullying.</p>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Pengguna</p>
+                <h2 id="totalUsers">120</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Total Laporan</p>
+                <h2 id="totalReports">45</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Laporan Diproses</p>
+                <h2 id="processingReports">12</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Laporan Selesai</p>
+                <h2 id="completedReports">28</h2>
+            </div>
+
+        </section>
+
+        <section class="dashboard-panel">
+
+            <h3>Filter Laporan</h3>
+
+            <div class="filter-container">
+
+                <input
+                    type="date"
+                    id="filterDate"
+                >
+
+                <select id="filterStatus">
+                    <option value="">Semua Status</option>
+                    <option value="Menunggu">Menunggu</option>
+                    <option value="Diproses">Diproses</option>
+                    <option value="Selesai">Selesai</option>
+                    <option value="Ditolak">Ditolak</option>
+                </select>
+
+                <button onclick="resetFilter()">
+                    Reset Filter
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-panel">
+
+            <h3>Laporan Terbaru</h3>
+
+            <div class="dashboard-table-wrap">
+                <table class="data-table">
+
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nomor Laporan</th>
+                            <th>Pelapor</th>
+                            <th>Kategori</th>
+                            <th>Tanggal</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reportTable"></tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="../app.js"></script>
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

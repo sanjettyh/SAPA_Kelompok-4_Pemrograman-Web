@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Laporan | Sahabat Sekolah</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="riwayatlaporan.css">
+</head>
+
+<body data-root="..">
+
+    <div id="navbarMount"></div>
+
+    <main class="main-content">
+
+        <div class="page-heading">
+            <span class="eyebrow">RUANG AMAN SEKOLAH</span>
+            <h1>Riwayat Laporan</h1>
+            <p>Daftar laporan yang pernah kamu kirimkan.</p>
+        </div>
+
+        <section class="card table-card">
+
+            <div class="card-heading table-heading">
+                <div>
+                    <h2>Semua Laporan</h2>
+                    <p id="historyCount">0 laporan tercatat</p>
+                </div>
+
+                <input type="text"
+                       class="search-box"
+                       id="historySearch"
+                       placeholder="Cari laporan...">
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Judul Laporan</th>
+                            <th>Kategori</th>
+                            <th>Tanggal</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="historyRows"></tbody>
+                </table>
+            </div>
+
+            <div class="empty-state" id="historyEmpty">
+                Belum ada laporan.
+            </div>
+
+        </section>
+
+        <div id="footerMount"></div>
+
+    </main>
+
+    <div class="modal-backdrop" id="appModal">
+        <div class="modal-box">
+            <button class="modal-close" data-modal-close>×</button>
+            <span class="eyebrow">DETAIL LAPORAN</span>
+            <h2 id="modalTitle">Detail</h2>
+            <p id="modalText"></p>
+
+            <button class="button button-light" data-modal-close>
+                Tutup
+            </button>
+        </div>
+    </div>
+
+    <script src="../app.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="riwayatlaporan.js"></script>
+
+</body>
+</html>

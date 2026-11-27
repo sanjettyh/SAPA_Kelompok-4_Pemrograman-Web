@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Guru BK</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body data-depth="1" data-page="dashboard" data-title="Dashboard Guru BK">
+    <div id="sidebar-container"></div>
+    <main class="guru-main">
+        <div id="navbar-container"></div>
+        <section class="guru-page-heading">
+            <h2>Ringkasan Guru BK</h2>
+            <p>Pantau laporan, penanganan kasus, dan jadwal konseling dari data lokal.</p>
+        </section>
+        <section class="guru-stats" aria-label="Ringkasan">
+            <article class="guru-stat"><span>Laporan Masuk</span><strong id="reportCount">0</strong></article>
+            <article class="guru-stat"><span>Kasus Saya</span><strong id="handlingCount">0</strong></article>
+            <article class="guru-stat"><span>Penanganan Berjalan</span><strong id="activeHandlingCount">0</strong></article>
+            <article class="guru-stat"><span>Sesi Mendatang</span><strong id="upcomingSessionCount">0</strong></article>
+        </section>
+        <section class="guru-panel">
+            <div class="guru-panel-heading">
+                <div><h3>Kasus Terbaru</h3><p>Kasus yang ditugaskan kepada profil Guru BK aktif.</p></div>
+                <a class="guru-panel-link" href="../penanganankasus/index.html">Lihat penanganan →</a>
+            </div>
+            <div class="guru-table-wrap">
+                <table class="guru-table dashboard-cases-table">
+                    <thead><tr><th>Kode Laporan</th><th>Kategori</th><th>Pelapor</th><th>Status Kasus</th><th>Tanggal</th></tr></thead>
+                    <tbody id="dashboardCases"></tbody>
+                </table>
+            </div>
+        </section>
+        <section class="guru-panel">
+            <div class="guru-panel-heading">
+                <div><h3>Jadwal Konseling Terdekat</h3><p>Sesi yang akan datang untuk konselor aktif.</p></div>
+                <a class="guru-panel-link" href="../jadwalkonseling/index.html">Lihat jadwal →</a>
+            </div>
+            <div class="guru-table-wrap">
+                <table class="guru-table">
+                    <thead><tr><th>Siswa</th><th>Waktu</th><th>Jenis</th><th>Status</th></tr></thead>
+                    <tbody id="dashboardSessions"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="../app.js"></script>
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

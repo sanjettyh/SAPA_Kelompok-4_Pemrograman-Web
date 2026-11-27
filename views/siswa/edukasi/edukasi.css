@@ -1,0 +1,123 @@
+.education-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(110deg,#eeeaff,#faf7ff);
+    border: 1px solid #eeebff;
+    border-radius: 15px;
+    padding: 23px 25px;
+    margin-bottom: 20px;
+}
+
+.education-banner h2 {
+    font: 800 21px 'Plus Jakarta Sans';
+    margin: 0 0 8px;
+}
+
+.education-banner p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #7f8798;
+    max-width: 500px;
+    margin: 0;
+}
+
+.education-banner-icon {
+    font-size: 55px;
+    padding: 0 20px;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.education-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.education-art {
+    height: 125px;
+    display: grid;
+    place-items: center;
+    font-size: 45px;
+}
+
+.published-education-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.published-education-card {
+    min-width: 0;
+}
+
+.published-education-link[aria-disabled="true"] {
+    opacity: .55;
+    pointer-events: none;
+}
+
+.art-purple {
+    background: #f0edff;
+}
+
+.art-peach {
+    background: #fff0e8;
+}
+
+.art-green {
+    background: #e8f7f1;
+}
+
+.education-copy {
+    padding: 15px;
+}
+
+.education-copy .eyebrow {
+    font-size: 8px;
+    margin: 0;
+}
+
+.education-copy h3 {
+    font: 700 12px 'Plus Jakarta Sans';
+    line-height: 1.5;
+    margin: 8px 0 6px;
+}
+
+.education-copy p {
+    font-size: 9px;
+    color: var(--muted);
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.text-link {
+    border: 0;
+    background: none;
+    color: var(--purple);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 6px 0;
+}
+
+@media(max-width:1050px) {
+    .education-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:760px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-banner-icon {
+        font-size: 40px;
+        padding: 0 5px;
+    }
+}

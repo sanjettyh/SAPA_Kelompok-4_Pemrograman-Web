@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk | Sahabat Sekolah</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body data-auth-page="login">
+    <main class="auth-layout">
+        <section class="auth-intro">
+            <a class="auth-brand" href="../index.html"><span class="auth-brand-icon">S</span><span>S A P A</span></a>
+            <div class="auth-intro-copy">
+                <span class="auth-eyebrow">SISTEM ADUAN DAN PENDAMPINGAN</span>
+                <h1>Mari ciptakan sekolah yang aman dan saling peduli.</h1>
+                <p>Masuk untuk melanjutkan ke ruang kerja sesuai peranmu.</p>
+            </div>
+            <div class="auth-intro-footer">Demo lokal · Data disimpan di browser ini</div>
+        </section>
+
+        <section class="auth-content">
+            <div class="auth-card">
+                <div class="auth-card-heading">
+                    <span class="auth-eyebrow">SELAMAT DATANG</span>
+                    <h2>Masuk ke akun</h2>
+                    <p>Gunakan email dan password yang terdaftar.</p>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <label for="loginEmail">Email</label>
+                    <input id="loginEmail" type="email" autocomplete="username" required placeholder="nama@email.com">
+
+                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Masukkan password">
+
+                    <p id="loginError" class="auth-error" role="alert" hidden></p>
+                    <button class="auth-submit" id="loginSubmit" type="submit">Masuk</button>
+                </form>
+
+                <p class="auth-switch">Belum punya akun Siswa? <a href="register.html">Daftar di sini</a></p>
+
+                <details class="demo-accounts">
+                    <summary>Akun demo untuk mencoba</summary>
+                    <p>Gunakan akun berikut. Ganti password setelah selesai mencoba bila diperlukan.</p>
+                    <div class="demo-account-list">
+                        <button type="button" data-demo-email="admin@example.com" data-demo-password="Admin123!"><strong>Admin</strong><span>admin@example.com · Admin123!</span></button>
+                        <button type="button" data-demo-email="dewi.guru@example.com" data-demo-password="Guru123!"><strong>Guru BK</strong><span>dewi.guru@example.com · Guru123!</span></button>
+                        <button type="button" data-demo-email="alya@example.com" data-demo-password="Siswa123!"><strong>Siswa</strong><span>alya@example.com · Siswa123!</span></button>
+                    </div>
+                </details>
+
+                <p class="auth-disclaimer">Demo lokal tidak menyediakan keamanan atau autentikasi server. Jangan gunakan password asli.</p>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<header class="guest-navbar" data-guest-navbar>
+    <a class="guest-brand" href="#" data-public-home>
+        <span class="brand-logo">S</span>
+        <span class="brand-copy"><strong>S A P A</strong><small>SISTEM ADUAN DAN PENDAMPINGAN</small></span>
+    </a>
+    <button class="guest-menu-toggle" id="guestMenuToggle" type="button" aria-label="Buka menu" aria-controls="guestNavigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="guest-nav" id="guestNavigation" aria-label="Navigasi publik">
+        <a href="#" data-public-home>Beranda</a>
+        <a href="#" class="nav-link" data-route="edukasi">
+            <span class="nav-icon">▱</span>
+            Edukasi Anti-Bullying
+        </a>
+        <a class="guest-login" href="#" data-public-login>Masuk</a>
+        <a class="guest-register" href="#" data-public-register>Daftar Siswa</a>
+    </nav>
+</header>
+
+<div data-student-navbar hidden>
+<button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Tutup menu"></button>
+<aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+        <div class="brand-logo">S</div>
+        <div class="brand-copy">
+            <strong>S A P A</strong>
+            <small>SISTEM ADUAN DAN PENDAMPINGAN</small>
+        </div>
+        <button class="sidebar-close" id="menuClose" type="button" aria-label="Tutup menu">×</button>
+    </div>
+
+    <div class="student-mini">
+        <div class="avatar" data-user-initials>AS</div>
+        <div>
+            <strong data-user-name>Aditya Saputra</strong>
+            <small>Siswa</small>
+        </div>
+    </div>
+
+    <span class="nav-caption">MENU UTAMA</span>
+
+    <nav class="side-nav">
+
+        <a href="#" class="nav-link" data-route="dashboard">
+            <span class="nav-icon">⌂</span>
+            Dashboard
+        </a>
+
+        <a href="#" class="nav-link" data-route="buatlaporan">
+            <span class="nav-icon">＋</span>
+            Buat Laporan
+        </a>
+
+        <a href="#" class="nav-link" data-route="riwayatlaporan">
+            <span class="nav-icon">▤</span>
+            Riwayat Laporan
+        </a>
+
+        <a href="#" class="nav-link" data-route="jadwalkonseling">
+            <span class="nav-icon">▦</span>
+            Jadwal Konseling
+        </a>
+
+        <a href="#" class="nav-link" data-route="edukasi">
+            <span class="nav-icon">▱</span>
+            Edukasi Anti-Bullying
+        </a>
+
+    </nav>
+
+    <span class="nav-caption nav-caption-account">
+        AKUN SAYA
+    </span>
+
+    <nav class="side-nav">
+
+        <a href="#" class="nav-link" data-route="profile">
+            <span class="nav-icon">♙</span>
+            Profil Saya
+        </a>
+
+        <button class="nav-link logout-link" id="logoutButton">
+            <span class="nav-icon">↪</span>
+            Logout
+        </button>
+
+    </nav>
+
+    <div class="sidebar-note">
+        <div class="note-heart">♡</div>
+        <strong>Kamu tidak sendirian!</strong>
+        <p>Jadilah bagian dari lingkungan sekolah yang aman dan nyaman.</p>
+        <a href="#" data-route="edukasi">Pelajari lebih lanjut →</a>
+    </div>
+
+    <div class="sidebar-copyright">
+        © 2026 Sahabat Sekolah
+    </div>
+
+</aside>
+
+
+<header class="topbar">
+
+    <div class="topbar-left">
+        <button class="mobile-menu" id="menuToggle" type="button" aria-label="Buka menu" aria-controls="sidebar" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="breadcrumb">
+            Siswa <span>/</span>
+            <strong id="currentPageName">Dashboard</strong>
+        </div>
+    </div>
+
+    <div class="topbar-right">
+        <span class="current-date" id="currentDate"></span>
+        <div class="top-avatar" data-user-initials>AS</div>
+    </div>
+
+</header>
+</div>

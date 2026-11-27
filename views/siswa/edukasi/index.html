@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi Anti-Bullying | Sahabat Sekolah</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="edukasi.css">
+</head>
+
+<body data-root="..">
+
+    <div id="navbarMount"></div>
+
+    <main class="main-content">
+
+        <div class="page-heading">
+            <span class="eyebrow">RUANG AMAN SEKOLAH</span>
+            <h1>Edukasi Anti-Bullying</h1>
+            <p>
+                Kenali bullying, pahami dampaknya,
+                dan ikut ciptakan sekolah yang aman.
+            </p>
+        </div>
+
+        <section class="education-banner">
+            <div>
+                <span class="eyebrow">BELAJAR BERSAMA</span>
+                <h2>Stop Bullying, Start Caring!</h2>
+                <p>
+                    Setiap siswa berhak mendapatkan lingkungan
+                    sekolah yang aman, nyaman, dan saling menghargai.
+                </p>
+            </div>
+
+            <div class="education-banner-icon">🛡️</div>
+        </section>
+
+        <div class="education-grid" aria-live="polite"></div>
+
+        <div id="footerMount"></div>
+
+    </main>
+
+    <div class="modal-backdrop" id="appModal">
+        <div class="modal-box">
+            <button class="modal-close" data-modal-close>×</button>
+
+            <span class="eyebrow">MATERI EDUKASI</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p>
+
+            <button class="button button-light" data-modal-close>
+                Tutup
+            </button>
+        </div>
+    </div>
+
+    <script src="../app.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="edukasi.js"></script>
+
+</body>
+</html>

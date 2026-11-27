@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+    --ink: #20283b;
+    --muted: #8790a3;
+    --line: #edf0f5;
+    --purple: #7565d8;
+    --purple-dark: #5f50c2;
+    --pale: #f5f3ff;
+    --bg: #f8f9fc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 14px 'DM Sans', sans-serif;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand-logo {
+    width: 39px;
+    height: 39px;
+    border-radius: 13px;
+    background: linear-gradient(145deg,#9284ef,#6655cf);
+    color: white;
+    display: grid;
+    place-items: center;
+    font: 800 21px 'Plus Jakarta Sans';
+}
+
+.brand-copy strong {
+    display: block;
+    font: 800 15px 'Plus Jakarta Sans';
+}
+
+.brand-copy small {
+    display: block;
+    font-size: 9px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* MAIN */
+
+.main-content {
+    min-height: calc(100vh - 68px);
+    max-width: 1600px;
+    padding: 31px 36px 20px;
+}
+
+.page-heading {
+    margin-bottom: 22px;
+}
+
+.eyebrow {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    color: var(--purple);
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.page-heading h1 {
+    font: 800 25px 'Plus Jakarta Sans';
+    margin: 0 0 7px;
+}
+
+.page-heading p {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* COMMON CARD */
+
+.card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 19px;
+}
+
+.card h2 {
+    font: 700 14px 'Plus Jakarta Sans';
+    margin: 0 0 5px;
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-heading p {
+    font-size: 10px;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* BUTTON */
+
+.button {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 10px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button-primary {
+    background: var(--purple);
+    color: white;
+    box-shadow: 0 5px 12px #7565d826;
+}
+
+.button-primary:hover {
+    background: var(--purple-dark);
+}
+
+.button-light {
+    background: #f1f2f6;
+    color: #657086;
+}
+
+/* STATUS */
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 20px;
+    font-size: 8px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-menunggu {
+    background: #fff4e6;
+    color: #c47a22;
+}
+
+.status-dijadwalkan {
+    background: #fff4e6;
+    color: #c47a22;
+}
+
+.status-dibatalkan {
+    background: #fff0f0;
+    color: #c45d68;
+}
+
+.status-diverifikasi {
+    background: #edf3ff;
+    color: #4d7fc3;
+}
+
+.status-diproses {
+    background: #f0edff;
+    color: #7565d8;
+}
+
+.status-selesai {
+    background: #e9f7f1;
+    color: #258e6b;
+}
+
+.status-ditolak {
+    background: #fff0f0;
+    color: #c45d68;
+}
+
+/* MODAL */
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #20283b66;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 50;
+}
+
+.modal-backdrop.show {
+    display: flex;
+}
+
+.modal-box {
+    width: min(480px,100%);
+    background: white;
+    border-radius: 15px;
+    padding: 24px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 16px;
+    top: 11px;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    color: #929aaa;
+}
+
+.modal-box h2 {
+    font: 700 17px 'Plus Jakarta Sans';
+    margin: 0 0 12px;
+}
+
+.modal-box p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: #667085;
+    white-space: pre-line;
+}
+
+/* TOAST */
+
+.toast {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    background: #263149;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 9px;
+    font-size: 10px;
+    opacity: 0;
+    transition: .25s;
+    z-index: 70;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* ERROR */
+
+.component-error {
+    margin: 20px;
+    padding: 15px;
+    background: #fff0f0;
+    color: #a33;
+    border-radius: 8px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:760px) {
+    .main-content {
+        padding: 23px 16px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+    }
+}

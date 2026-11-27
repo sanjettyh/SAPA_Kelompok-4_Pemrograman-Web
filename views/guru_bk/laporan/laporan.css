@@ -1,0 +1,22 @@
+.report-toolbar {
+    align-items: center;
+}
+
+.report-table td:first-child {
+    min-width: 145px;
+    font-weight: 600;
+}
+
+.report-table td:nth-child(2),
+.report-table td:nth-child(3),
+.report-table td:nth-child(4) {
+    min-width: 120px;
+}
+
+.report-table td:nth-child(5) {
+    min-width: 170px;
+}
+
+.report-detail-copy {
+    white-space: pre-wrap;
+}

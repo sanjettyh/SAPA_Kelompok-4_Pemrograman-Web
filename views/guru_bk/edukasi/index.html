@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi Anti-Bullying | Guru BK</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="edukasi.css">
+</head>
+<body data-depth="1" data-page="edukasi" data-title="Edukasi">
+    <div id="sidebar-container"></div>
+    <main class="guru-main">
+        <div id="navbar-container"></div>
+        <section class="guru-page-heading"><h2>Edukasi Anti-Bullying</h2><p>Baca materi edukasi yang sudah dipublikasikan oleh admin.</p></section>
+        <section class="guru-content-grid" id="educationGrid" aria-live="polite"></section>
+        <p class="guru-summary" id="educationEmpty" hidden>Belum ada konten edukasi yang dipublikasikan.</p>
+    </main>
+    <div class="guru-modal" id="educationModal" hidden>
+        <section class="guru-dialog" role="dialog" aria-modal="true" aria-labelledby="educationModalTitle">
+            <div class="guru-dialog-heading"><div><h2 id="educationModalTitle"></h2><p id="educationMeta"></p></div><button class="guru-close-button" id="closeEducation" type="button" aria-label="Tutup">×</button></div>
+            <p id="educationContent" class="guru-content-copy"></p>
+            <div class="guru-modal-actions"><button class="guru-secondary-button" id="dismissEducation" type="button">Tutup</button></div>
+        </section>
+    </div>
+    <script type="module" src="../app.js"></script>
+    <script type="module" src="edukasi.js"></script>
+</body>
+</html>

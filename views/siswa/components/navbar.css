@@ -1,0 +1,569 @@
+
+/* ============================
+   NAVBAR SAHABAT SEKOLAH
+============================ */
+
+#navbarMount {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+[data-student-navbar][hidden],
+[data-guest-navbar][hidden] {
+    display: none !important;
+}
+
+.guest-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px clamp(18px, 4vw, 58px);
+    border-bottom: 1px solid var(--line);
+    background: rgb(255 255 255 / 96%);
+    box-shadow: 0 5px 18px #20283b08;
+}
+
+.guest-brand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 11px;
+}
+
+.guest-menu-toggle {
+    display: none;
+}
+
+.guest-brand .brand-logo {
+    flex-shrink: 0;
+}
+
+.guest-brand .brand-copy strong {
+    display: block;
+    font: 800 14px 'Plus Jakarta Sans', sans-serif;
+}
+
+.guest-brand .brand-copy small {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.guest-nav {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.guest-nav a {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #657087;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.guest-nav a:hover,
+.guest-nav a.active {
+    background: var(--pale);
+    color: var(--purple-dark);
+}
+
+.guest-nav a.guest-login {
+    border: 1px solid #e1ddfa;
+    color: var(--purple-dark);
+}
+
+.guest-nav a.guest-register {
+    background: var(--purple);
+    color: #fff;
+}
+
+.guest-nav a.guest-register:hover {
+    background: var(--purple-dark);
+    color: #fff;
+}
+
+#navbarMount .sidebar {
+    position: relative;
+    inset: auto;
+    z-index: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 76px;
+    padding: 12px 4%;
+    overflow: visible;
+    transform: none;
+    background: #fff;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 5px 18px #20283b08;
+    transition: transform .22s ease;
+}
+
+#navbarMount .sidebar-backdrop {
+    display: none;
+}
+
+#navbarMount .brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 11px;
+    padding: 0;
+}
+
+#navbarMount .brand-logo {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 13px;
+    background: linear-gradient(145deg, #9284ef, #6655cf);
+    color: #fff;
+    font: 800 21px 'Plus Jakarta Sans', sans-serif;
+}
+
+#navbarMount .brand-copy strong {
+    display: block;
+    font: 800 15px 'Plus Jakarta Sans', sans-serif;
+}
+
+#navbarMount .brand-copy small {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+#navbarMount .student-mini,
+#navbarMount .nav-caption,
+#navbarMount .sidebar-note,
+#navbarMount .sidebar-copyright {
+    display: none;
+}
+
+#navbarMount .side-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+}
+
+#navbarMount .sidebar > .side-nav:first-of-type {
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+#navbarMount .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: auto;
+    margin: 0;
+    padding: 10px 11px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: #737d91;
+    font-size: 11px;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .2s, color .2s;
+}
+
+#navbarMount .nav-link:hover,
+#navbarMount .nav-link.active {
+    background: var(--pale);
+    color: var(--purple-dark);
+}
+
+#navbarMount .nav-link.active {
+    font-weight: 700;
+}
+
+#navbarMount .nav-icon {
+    width: auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+#navbarMount .logout-link {
+    color: #c16e77;
+}
+
+#navbarMount .nav-link:focus-visible,
+#navbarMount .brand:focus-visible {
+    outline: 3px solid #a69be9;
+    outline-offset: 3px;
+}
+
+#navbarMount .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin-left: 0;
+    padding: 0 4%;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#navbarMount .topbar-left,
+#navbarMount .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#navbarMount .breadcrumb {
+    color: #9ba2b0;
+    font-size: 11px;
+}
+
+#navbarMount .breadcrumb span {
+    padding: 0 9px;
+}
+
+#navbarMount .breadcrumb strong {
+    color: #414b60;
+}
+
+#navbarMount .current-date {
+    color: #929aaa;
+    font-size: 10px;
+}
+
+#navbarMount .top-avatar {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    border-radius: 50%;
+    background: #e6e1ff;
+    color: #6858c9;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+#navbarMount .mobile-menu {
+    display: none;
+}
+
+#navbarMount .sidebar-close {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    #navbarMount .sidebar {
+        gap: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #navbarMount .nav-link {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 850px) {
+    .guest-navbar {
+        position: relative;
+        flex-wrap: nowrap;
+        gap: 12px;
+        min-height: 64px;
+        padding: 10px 16px;
+    }
+
+    .guest-nav {
+        position: absolute;
+        z-index: 41;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 5px;
+        width: auto;
+        padding: 12px 16px 16px;
+        border-bottom: 1px solid var(--line);
+        background: #fff;
+        box-shadow: 0 12px 18px #20283b12;
+    }
+
+    .guest-navbar.menu-open .guest-nav {
+        display: flex;
+    }
+
+    .guest-nav a {
+        padding: 12px;
+    }
+
+    .guest-menu-toggle {
+        display: flex;
+        flex: 0 0 auto;
+        width: 40px;
+        height: 40px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: #fff;
+    }
+
+    .guest-menu-toggle span {
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--ink);
+    }
+
+    .guest-menu-toggle:focus-visible {
+        outline: 3px solid #a69be9;
+        outline-offset: 3px;
+    }
+
+    #navbarMount .sidebar {
+        position: fixed;
+        z-index: 60;
+        inset: 0 auto 0 0;
+        display: flex;
+        width: min(300px, calc(100vw - 52px));
+        height: 100vh;
+        height: 100dvh;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 18px 16px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        transform: translateX(-105%);
+        border-right: 1px solid var(--line);
+        border-bottom: 0;
+        box-shadow: 12px 0 32px #20283b1c;
+    }
+
+    #navbarMount .sidebar.open {
+        transform: translateX(0);
+    }
+
+    #navbarMount .sidebar-backdrop {
+        position: fixed;
+        z-index: 55;
+        inset: 0;
+        display: block;
+        border: 0;
+        background: rgb(32 40 59 / 48%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .22s ease;
+    }
+
+    #navbarMount .sidebar-backdrop.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    #navbarMount .brand {
+        position: relative;
+        flex: 0 0 auto;
+        min-height: 48px;
+        padding-right: 42px;
+    }
+
+    #navbarMount .sidebar-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border: 0;
+        border-radius: 9px;
+        background: #f1efff;
+        color: var(--purple-dark);
+        font-size: 24px;
+    }
+
+    #navbarMount .student-mini {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 18px 0 20px;
+        padding: 14px 10px;
+        border-radius: 10px;
+        background: #f8f7ff;
+    }
+
+    #navbarMount .student-mini strong,
+    #navbarMount .student-mini small {
+        display: block;
+    }
+
+    #navbarMount .student-mini strong {
+        font-size: 13px;
+    }
+
+    #navbarMount .student-mini small {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 11px;
+    }
+
+    #navbarMount .nav-caption {
+        display: block;
+        margin: 12px 10px 7px;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .08em;
+    }
+
+    #navbarMount .nav-caption-account {
+        margin-top: 22px;
+    }
+
+    #navbarMount .side-nav {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        width: 100%;
+        max-width: none;
+        overflow: visible;
+        padding: 0;
+    }
+
+    #navbarMount .nav-link {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    #navbarMount .nav-icon {
+        width: 20px;
+    }
+
+    #navbarMount .sidebar-note {
+        display: block;
+        margin-top: 22px;
+        padding: 14px;
+        border-radius: 11px;
+        background: #f8f7ff;
+    }
+
+    #navbarMount .sidebar-note p {
+        margin: 6px 0;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    #navbarMount .sidebar-note a {
+        color: var(--purple-dark);
+        font-size: 11px;
+        font-weight: 700;
+    }
+
+    #navbarMount .sidebar-copyright {
+        display: block;
+        margin-top: auto;
+        padding-top: 18px;
+        color: var(--muted);
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #navbarMount .mobile-menu {
+        display: flex;
+        flex: 0 0 auto;
+        width: 40px;
+        height: 40px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: #fff;
+    }
+
+    #navbarMount .mobile-menu span {
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--ink);
+    }
+
+    body.student-menu-open {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 500px) {
+    .guest-navbar {
+        gap: 8px;
+        padding: 10px 15px;
+    }
+
+    .guest-nav {
+        gap: 3px;
+    }
+
+    .guest-nav a {
+        padding: 9px 10px;
+        font-size: 11px;
+    }
+
+    #navbarMount .sidebar {
+        padding: 11px 15px;
+    }
+
+    #navbarMount .brand-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    #navbarMount .brand-copy strong {
+        font-size: 12px;
+    }
+
+    #navbarMount .topbar {
+        height: 55px;
+        padding: 0 15px;
+    }
+
+    #navbarMount .current-date {
+        display: none;
+    }
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Bullying Admin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="kategori.css">
+</head>
+<body data-page="kategori" data-title="Kategori Bullying">
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+        <div id="navbar-container"></div>
+
+        <section class="content-title">
+            <h2>Manajemen Kategori Bullying</h2>
+            <p>Kelola kategori yang digunakan untuk mengelompokkan laporan.</p>
+        </section>
+
+        <section class="category-panel">
+            <div class="category-toolbar">
+                <div>
+                    <h3>Daftar Kategori</h3>
+                    <p id="categoryCount">0 kategori</p>
+                </div>
+                <button class="category-primary-button" id="addCategoryButton" type="button">
+                    + Tambah Kategori
+                </button>
+            </div>
+
+            <div class="category-filters">
+                <label class="category-search">
+                    <span class="visually-hidden">Cari kategori</span>
+                    <input id="searchCategories" type="search" placeholder="Cari nama atau deskripsi kategori...">
+                </label>
+                <button class="category-secondary-button" id="resetSearch" type="button">Reset</button>
+            </div>
+
+            <div class="category-table-wrap">
+                <table class="category-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Nama Kategori</th>
+                            <th scope="col">Deskripsi</th>
+                            <th scope="col">Dibuat</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="categoryTable"></tbody>
+                </table>
+            </div>
+            <p class="category-summary" id="categorySummary" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <div class="category-modal-backdrop" id="categoryModal" hidden>
+        <section class="category-modal" role="dialog" aria-modal="true" aria-labelledby="categoryModalTitle">
+            <div class="category-modal-heading">
+                <div>
+                    <h2 id="categoryModalTitle">Tambah Kategori</h2>
+                    <p>Isi nama dan deskripsi kategori bullying.</p>
+                </div>
+                <button class="category-close-button" id="closeCategoryModal" type="button" aria-label="Tutup">×</button>
+            </div>
+
+            <form id="categoryForm">
+                <input id="categoryId" type="hidden">
+                <label>
+                    Nama kategori
+                    <input id="categoryName" name="name" type="text" maxlength="100" required>
+                </label>
+                <label>
+                    Deskripsi <span class="category-optional-label">(opsional)</span>
+                    <textarea id="categoryDescription" name="description" rows="4"></textarea>
+                </label>
+                <p class="category-form-error" id="categoryFormError" role="alert" hidden></p>
+                <div class="category-modal-actions">
+                    <button class="category-secondary-button" id="cancelCategory" type="button">Batal</button>
+                    <button class="category-primary-button" type="submit">Simpan Kategori</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script type="module" src="../app.js"></script>
+    <script src="kategori.js"></script>
+</body>
+</html>

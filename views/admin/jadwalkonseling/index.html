@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Konseling Admin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../local-data.css">
+    <link rel="stylesheet" href="jadwalkonseling.css">
+</head>
+<body data-page="konseling" data-title="Jadwal Konseling">
+    <div id="sidebar-container"></div>
+    <main class="main-content">
+        <div id="navbar-container"></div>
+        <section class="content-title">
+            <h2>Jadwal Konseling</h2>
+            <p>Atur jadwal sesi konseling siswa bersama Guru BK.</p>
+        </section>
+        <section class="local-data-panel">
+            <div class="local-data-toolbar">
+                <div><h3>Daftar Sesi</h3><p id="sessionCount"></p></div>
+                <button class="local-data-primary" id="addSession" type="button">+ Jadwalkan Sesi</button>
+            </div>
+            <div class="local-data-filters">
+                <label class="local-data-search"><span class="local-data-visually-hidden">Cari sesi</span><input id="sessionSearch" type="search" placeholder="Cari siswa atau konselor..."></label>
+                <label><span class="local-data-visually-hidden">Filter status</span><select id="sessionFilter"><option value="">Semua Status</option><option value="dijadwalkan">Dijadwalkan</option><option value="selesai">Selesai</option><option value="dibatalkan">Dibatalkan</option></select></label>
+                <button class="local-data-secondary" id="resetSessionFilters" type="button">Reset</button>
+            </div>
+            <div class="local-data-table-wrap">
+                <table class="local-data-table">
+                    <thead><tr><th>Siswa</th><th>Konselor</th><th>Waktu</th><th>Jenis</th><th>Status</th><th>Aksi</th></tr></thead>
+                    <tbody id="sessionTable"></tbody>
+                </table>
+            </div>
+            <p class="local-data-summary" id="sessionSummary" aria-live="polite"></p>
+        </section>
+    </main>
+    <div class="local-data-modal" id="sessionModal" hidden>
+        <section class="local-data-dialog" role="dialog" aria-modal="true" aria-labelledby="sessionModalTitle">
+            <div class="local-data-dialog-heading"><div><h2 id="sessionModalTitle">Jadwalkan Sesi</h2><p>Hubungkan sesi dengan penanganan kasus dan peserta.</p></div><button class="local-data-close" id="closeSession" type="button" aria-label="Tutup">×</button></div>
+            <form class="local-data-form" id="sessionForm">
+                <input id="sessionId" type="hidden">
+                <label>Penanganan kasus<select id="sessionHandling" required></select></label>
+                <div class="local-data-columns">
+                    <label>Siswa<select id="sessionStudent"></select></label>
+                    <label>Konselor (Guru BK)<select id="sessionCounselor" required></select></label>
+                </div>
+                <label>Tanggal dan waktu<input id="sessionDate" type="datetime-local" required></label>
+                <div class="local-data-columns">
+                    <label>Jenis sesi<select id="sessionType" required><option value="tatap_muka">Tatap muka</option><option value="online">Online</option></select></label>
+                    <label>Status<select id="sessionStatus" required><option value="dijadwalkan">Dijadwalkan</option><option value="selesai">Selesai</option><option value="dibatalkan">Dibatalkan</option></select></label>
+                </div>
+                <label>Catatan<textarea id="sessionNotes" rows="4"></textarea></label>
+                <p class="local-data-error" id="sessionError" role="alert" hidden></p>
+                <div class="local-data-modal-actions"><button class="local-data-secondary" id="cancelSession" type="button">Batal</button><button class="local-data-primary" type="submit">Simpan Jadwal</button></div>
+            </form>
+        </section>
+    </div>
+    <script type="module" src="../app.js"></script>
+    <script src="jadwalkonseling.js"></script>
+</body>
+</html>

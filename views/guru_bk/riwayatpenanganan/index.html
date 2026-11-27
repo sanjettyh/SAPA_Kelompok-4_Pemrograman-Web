@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Penanganan | Guru BK</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="riwayatpenanganan.css">
+</head>
+<body data-depth="1" data-page="riwayat" data-title="Riwayat Penanganan">
+    <div id="sidebar-container"></div>
+    <main class="guru-main">
+        <div id="navbar-container"></div>
+        <section class="guru-page-heading"><h2>Riwayat Penanganan</h2><p>Lihat perubahan status dan catatan aktivitas pada kasus yang ditangani.</p></section>
+        <section class="guru-panel">
+            <div class="guru-toolbar history-toolbar">
+                <label class="guru-search"><span class="guru-visually-hidden">Cari riwayat</span><input id="historySearch" type="search" placeholder="Cari kode laporan, kategori, atau catatan..."></label>
+                <label><span class="guru-visually-hidden">Filter jenis</span><select id="historyType" class="guru-input"><option value="">Semua Aktivitas</option><option value="penanganan">Status Penanganan</option><option value="laporan">Status Laporan</option></select></label>
+                <button class="guru-secondary-button" id="resetHistoryFilters" type="button">Reset</button>
+            </div>
+            <div class="guru-table-wrap"><table class="guru-table history-table"><thead><tr><th>Waktu</th><th>Kode Laporan</th><th>Aktivitas</th><th>Perubahan Status</th><th>Catatan</th></tr></thead><tbody id="historyTable"></tbody></table></div>
+            <p class="guru-summary" id="historySummary" aria-live="polite"></p>
+        </section>
+    </main>
+    <script type="module" src="../app.js"></script>
+    <script type="module" src="riwayatpenanganan.js"></script>
+</body>
+</html>

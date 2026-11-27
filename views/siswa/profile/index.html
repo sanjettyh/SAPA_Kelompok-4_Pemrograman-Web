@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya | Sahabat Sekolah</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body data-root="..">
+
+    <div id="navbarMount"></div>
+
+    <main class="main-content">
+
+        <div class="page-heading">
+            <span class="eyebrow">RUANG AMAN SEKOLAH</span>
+            <h1>Profil Saya</h1>
+            <p>Periksa dan perbarui informasi akunmu.</p>
+        </div>
+
+        <section class="card profile-card">
+
+            <div class="profile-banner">
+
+                <div class="profile-avatar" data-user-initials>
+                    AS
+                </div>
+
+                <div>
+                    <h2 data-user-name>Aditya Saputra</h2>
+                    <p>Siswa · Akun demo lokal</p>
+                </div>
+
+            </div>
+
+            <form id="profileForm" class="profile-form">
+
+                <h2>Informasi Pribadi</h2>
+
+                <div class="two-columns">
+
+                    <div>
+                        <label for="profileName">Nama lengkap</label>
+                        <input type="text" id="profileName" required>
+                    </div>
+
+                    <div>
+                        <label for="profileEmail">Email</label>
+                        <input type="email" id="profileEmail" required>
+                    </div>
+
+                    <div>
+                        <label for="profileNis">NIS</label>
+                        <input type="text" id="profileNis">
+                    </div>
+
+                    <div>
+                        <label for="profileClass">Kelas</label>
+                        <input type="text" id="profileClass">
+                    </div>
+
+                </div>
+
+                <label for="profilePhone">Nomor telepon</label>
+                <input type="tel" id="profilePhone"
+                       placeholder="Masukkan nomor telepon">
+
+                <button class="button button-primary" type="submit">
+                    Simpan Perubahan
+                </button>
+
+            </form>
+
+        </section>
+
+        <div id="footerMount"></div>
+
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="../app.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+</html>

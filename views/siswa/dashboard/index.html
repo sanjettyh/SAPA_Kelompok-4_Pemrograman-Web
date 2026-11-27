@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Sahabat Sekolah</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- CSS COMPONENTS -->
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../components/footer.css">
+
+    <!-- CSS KHUSUS DASHBOARD -->
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body data-root="..">
+
+    <!-- NAVBAR -->
+    <div id="navbarMount"></div>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- WELCOME BANNER -->
+        <section class="welcome-banner">
+
+            <div class="welcome-content">
+
+                <span class="eyebrow">SELAMAT DATANG</span>
+
+                <h1>
+                    Halo, <span data-first-name>Aditya</span>! 👋
+                </h1>
+
+                <p>
+                    Selamat datang di Sahabat Sekolah.
+                    Bersama kita ciptakan lingkungan sekolah yang aman,
+                    nyaman, dan bebas bullying.
+                </p>
+
+                <a href="../buatlaporan/index.html"
+                   class="button button-primary">
+                    + Buat Laporan
+                </a>
+
+            </div>
+
+            <div class="welcome-illustration">
+                <span>♡</span>
+                SAHABAT<br>SEKOLAH
+            </div>
+
+        </section>
+
+
+        <!-- STATISTIK LAPORAN -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-head">
+                    Total Laporan
+                    <span class="stat-icon purple">▤</span>
+                </div>
+
+                <strong id="statTotal">0</strong>
+
+                <small>Seluruh laporan kamu</small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-head">
+                    Menunggu
+                    <span class="stat-icon orange">◷</span>
+                </div>
+
+                <strong id="statWaiting">0</strong>
+
+                <small>Menunggu verifikasi</small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-head">
+                    Diproses
+                    <span class="stat-icon blue">↻</span>
+                </div>
+
+                <strong id="statProcess">0</strong>
+
+                <small>Sedang ditangani</small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-head">
+                    Selesai
+                    <span class="stat-icon green">✓</span>
+                </div>
+
+                <strong id="statDone">0</strong>
+
+                <small>Laporan selesai</small>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT GRID -->
+        <section class="content-grid">
+
+            <!-- LAPORAN TERBARU -->
+            <div class="card latest-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <h2>Laporan Terbaru</h2>
+
+                        <p>
+                            Aktivitas laporan yang kamu kirimkan.
+                        </p>
+                    </div>
+
+                    <a href="../riwayatlaporan/index.html"
+                       class="text-link">
+                        Lihat semua →
+                    </a>
+
+                </div>
+
+                <div class="latest-list" id="latestReports">
+
+                    <!-- DATA LAPORAN DARI JAVASCRIPT -->
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR KONTEN -->
+            <div class="dashboard-side">
+
+                <!-- MOTIVASI -->
+                <div class="card encouragement-card">
+
+                    <div class="quote-mark">“</div>
+
+                    <h2>
+                        Berani bicara adalah langkah pertama
+                        untuk berubah.
+                    </h2>
+
+                    <p>
+                        Jangan takut untuk mencari bantuan.
+                        Kamu berhak merasa aman dan dihargai.
+                    </p>
+
+                    <span class="hashtag">
+                        #StopBullying
+                    </span>
+
+                </div>
+
+
+                <!-- PENGINGAT -->
+                <div class="card reminder-card">
+
+                    <span class="reminder-icon">♡</span>
+
+                    <div>
+
+                        <strong>
+                            Ingat, kamu tidak sendiri!
+                        </strong>
+
+                        <p>
+                            Guru BK siap mendengarkan
+                            dan mendampingimu.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <div id="footerMount"></div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT GLOBAL -->
+    <script src="../app.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+
+    <!-- JAVASCRIPT DASHBOARD -->
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

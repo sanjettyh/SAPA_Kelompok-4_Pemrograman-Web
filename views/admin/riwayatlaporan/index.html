@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Laporan Admin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../local-data.css">
+    <link rel="stylesheet" href="riwayatlaporan.css">
+</head>
+<body data-page="riwayat" data-title="Riwayat Laporan">
+    <div id="sidebar-container"></div>
+    <main class="main-content">
+        <div id="navbar-container"></div>
+
+        <section class="content-title">
+            <h2>Riwayat Laporan</h2>
+            <p>Lihat laporan yang tercatat dan riwayat perubahan statusnya.</p>
+        </section>
+
+
+        <section class="history-overview" aria-label="Ringkasan riwayat laporan">
+            <article class="history-stat">
+                <span>Total Laporan</span>
+                <strong id="historyTotalReports">0</strong>
+            </article>
+            <article class="history-stat">
+                <span>Total Perubahan</span>
+                <strong id="historyTotalEvents">0</strong>
+            </article>
+            <article class="history-stat">
+                <span>Laporan Selesai</span>
+                <strong id="historyCompletedReports">0</strong>
+            </article>
+        </section>
+
+        <section class="local-data-panel history-panel">
+            <div class="local-data-toolbar">
+                <div>
+                    <h3>Aktivitas Laporan</h3>
+                    <p id="historyCount">0 aktivitas</p>
+                </div>
+            </div>
+
+            <div class="local-data-filters">
+                <label class="local-data-search">
+                    <span class="local-data-visually-hidden">Cari riwayat</span>
+                    <input id="historySearch" type="search" placeholder="Cari kode, pelapor, atau kategori...">
+                </label>
+                <label>
+                    <span class="local-data-visually-hidden">Filter status</span>
+                    <select id="historyStatus">
+                        <option value="">Semua Status</option>
+                        <option value="menunggu">Menunggu</option>
+                        <option value="diverifikasi">Diverifikasi</option>
+                        <option value="diproses">Diproses</option>
+                        <option value="pendampingan">Pendampingan</option>
+                        <option value="selesai">Selesai</option>
+                        <option value="ditolak">Ditolak</option>
+                    </select>
+                </label>
+                <button class="local-data-secondary" id="resetHistoryFilters" type="button">Reset</button>
+            </div>
+
+            <div class="local-data-table-wrap">
+                <table class="local-data-table history-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Waktu</th>
+                            <th scope="col">Kode Laporan</th>
+                            <th scope="col">Pelapor</th>
+                            <th scope="col">Perubahan Status</th>
+                            <th scope="col">Diubah Oleh</th>
+                            <th scope="col">Catatan</th>
+                            <th scope="col">Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTable"></tbody>
+                </table>
+            </div>
+            <p class="local-data-summary" id="historySummary" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <div class="history-modal" id="historyModal" hidden>
+        <section class="history-dialog" role="dialog" aria-modal="true" aria-labelledby="historyModalTitle">
+            <div class="history-dialog-heading">
+                <div>
+                    <h2 id="historyModalTitle">Detail Riwayat</h2>
+                    <p id="historyModalCode"></p>
+                </div>
+                <button class="local-data-close" id="closeHistoryModal" type="button" aria-label="Tutup">×</button>
+            </div>
+            <dl class="history-details" id="historyDetails"></dl>
+            <div class="history-modal-actions">
+                <button class="local-data-secondary" id="dismissHistoryModal" type="button">Tutup</button>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="../app.js"></script>
+    <script src="riwayatlaporan.js"></script>
+</body>
+</html>

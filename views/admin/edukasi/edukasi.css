@@ -1,0 +1,358 @@
+.education-local-notice {
+    margin-bottom: 18px;
+    padding: 12px 15px;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1e40af;
+    font-size: 13px;
+}
+
+.education-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.education-stat,
+.education-panel {
+    border: 1px solid #e8ebf0;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.education-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 20px;
+}
+
+.education-stat span {
+    color: #707887;
+    font-size: 13px;
+}
+
+.education-stat strong {
+    color: #202938;
+    font-size: 26px;
+}
+
+.education-panel {
+    padding: 22px;
+}
+
+.education-toolbar,
+.education-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.education-toolbar {
+    margin-bottom: 20px;
+}
+
+.education-toolbar h3 {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.education-toolbar p,
+.education-summary {
+    color: #77808e;
+    font-size: 13px;
+}
+
+.education-primary-button,
+.education-secondary-button,
+.education-action-button,
+.education-close-button {
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.education-primary-button {
+    padding: 11px 15px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.education-primary-button:hover {
+    background: #1d4ed8;
+}
+
+.education-secondary-button {
+    padding: 10px 14px;
+    border: 1px solid #d8dde6;
+    background: #fff;
+    color: #475569;
+    font-size: 13px;
+}
+
+.education-filters {
+    justify-content: flex-start;
+    margin-bottom: 16px;
+}
+
+.education-search {
+    flex: 1;
+    max-width: 430px;
+}
+
+.education-filters input,
+.education-filters select,
+.education-modal input,
+.education-modal select,
+.education-modal textarea {
+    min-height: 40px;
+    padding: 9px 11px;
+    border: 1px solid #d8dde6;
+    border-radius: 7px;
+    background: #fff;
+    color: #252b36;
+    font: inherit;
+    font-size: 13px;
+}
+
+.education-search input {
+    width: 100%;
+}
+
+.education-modal textarea {
+    resize: vertical;
+}
+
+.education-modal small {
+    color: #77808e;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.education-table-wrap {
+    overflow-x: auto;
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.education-table th,
+.education-table td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #edf0f4;
+    text-align: left;
+    font-size: 13px;
+}
+
+.education-table th {
+    background: #f8fafc;
+    color: #5b6472;
+    font-weight: 600;
+}
+
+.education-table td {
+    color: #394150;
+}
+
+.education-content-title {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.education-content-title strong,
+.education-content-title small {
+    display: block;
+}
+
+.education-content-title small {
+    margin-top: 4px;
+    color: #77808e;
+    font-size: 11px;
+}
+
+.education-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.education-badge.status-published {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.education-badge.status-draft {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.education-action-group {
+    display: flex;
+    gap: 6px;
+}
+
+.education-action-button {
+    padding: 7px 9px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+}
+
+.education-action-button.delete {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.education-empty-row {
+    padding: 30px !important;
+    color: #77808e !important;
+    text-align: center !important;
+}
+
+.education-summary {
+    margin-top: 13px;
+}
+
+.education-modal-backdrop[hidden] {
+    display: none;
+}
+
+.education-modal-backdrop {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+    padding: 20px;
+    background: rgb(15 23 42 / 48%);
+}
+
+.education-modal {
+    width: min(100%, 620px);
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 24px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 20px 50px rgb(15 23 42 / 20%);
+}
+
+.education-modal-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.education-modal-heading h2 {
+    margin-bottom: 5px;
+    font-size: 19px;
+}
+
+.education-modal-heading p {
+    color: #77808e;
+    font-size: 12px;
+}
+
+.education-close-button {
+    width: 32px;
+    height: 32px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 22px;
+}
+
+.education-modal form,
+.education-modal form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-modal form {
+    gap: 14px;
+}
+
+.education-modal form label {
+    gap: 7px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.education-form-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.education-optional-label {
+    color: #8992a0;
+    font-weight: 400;
+}
+
+.education-form-error {
+    color: #b91c1c;
+    font-size: 13px;
+}
+
+.education-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-top: 5px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+@media (max-width: 900px) {
+    .education-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .education-panel {
+        padding: 16px;
+    }
+
+    .education-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .education-filters {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .education-search {
+        max-width: none;
+    }
+
+    .education-form-columns {
+        grid-template-columns: 1fr;
+    }
+}

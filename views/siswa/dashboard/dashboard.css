@@ -1,0 +1,253 @@
+.welcome-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(110deg,#f0edff,#faf7ff);
+    border: 1px solid #eeebff;
+    border-radius: 15px;
+    padding: 23px 26px;
+    margin-bottom: 17px;
+}
+
+.welcome-banner h1 {
+    font: 800 24px 'Plus Jakarta Sans';
+    margin: 0 0 8px;
+}
+
+.welcome-banner p {
+    font-size: 11px;
+    color: #7f8798;
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 0 15px;
+}
+
+.welcome-illustration {
+    width: 165px;
+    height: 100px;
+    border-radius: 15px;
+    background: #e3ddff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #6d5cc9;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 10px;
+}
+
+.welcome-illustration span {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background: #9a8be8;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 13px;
+    margin-bottom: 17px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    padding: 15px 17px;
+}
+
+.stat-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #7e8799;
+    font-size: 10px;
+}
+
+.stat-icon {
+    width: 29px;
+    height: 29px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+}
+
+.purple {
+    background: #f0edff;
+    color: #7767d9;
+}
+
+.orange {
+    background: #fff4e7;
+    color: #d88a32;
+}
+
+.blue {
+    background: #eaf3ff;
+    color: #4b85cb;
+}
+
+.green {
+    background: #e8f7f1;
+    color: #269b75;
+}
+
+.stat-card > strong {
+    display: block;
+    font: 800 24px 'Plus Jakarta Sans';
+    margin: 8px 0 2px;
+}
+
+.stat-card small {
+    font-size: 9px;
+    color: #a0a7b4;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 15px;
+}
+
+.latest-list {
+    margin-top: 14px;
+}
+
+.latest-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 0;
+    border-top: 1px solid #f1f2f6;
+}
+
+.latest-symbol {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: #f2efff;
+    color: #7869d3;
+    display: grid;
+    place-items: center;
+}
+
+.latest-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.latest-info strong,
+.latest-info small {
+    display: block;
+}
+
+.latest-info strong {
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.latest-info small {
+    font-size: 9px;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+.text-link {
+    border: 0;
+    background: none;
+    color: var(--purple);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.encouragement-card {
+    background: linear-gradient(145deg,#7062cf,#887be2);
+    color: white;
+    padding: 22px;
+}
+
+.encouragement-card .quote-mark {
+    font: 800 52px Georgia;
+    color: #c5bfff;
+    line-height: .8;
+}
+
+.encouragement-card h2 {
+    font: 700 16px 'Plus Jakarta Sans';
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.encouragement-card p {
+    font-size: 10px;
+    line-height: 1.8;
+    color: #eeecff;
+}
+
+.hashtag {
+    font-size: 9px;
+    color: #d5d0ff;
+    font-weight: 700;
+}
+
+.reminder-card {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.reminder-icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    background: #fff5e7;
+    color: #d99b45;
+    border-radius: 10px;
+}
+
+.reminder-card strong {
+    font-size: 10px;
+}
+
+.reminder-card p {
+    font-size: 9px;
+    color: var(--muted);
+    margin: 4px 0 0;
+}
+
+@media(max-width:1050px) {
+    .stats-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:760px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:470px) {
+    .welcome-illustration {
+        display: none;
+    }
+
+    .stats-grid {
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+}

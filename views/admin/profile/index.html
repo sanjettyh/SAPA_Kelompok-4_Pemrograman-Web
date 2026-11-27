@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Admin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body data-page="profile" data-title="Profil Saya">
+    <div id="sidebar-container"></div>
+    <main class="main-content">
+        <div id="navbar-container"></div>
+        <section class="content-title">
+            <h2>Profil Admin</h2>
+            <p>Lihat dan perbarui informasi akun administrator.</p>
+        </section>
+        <section class="profile-panel">
+            <div class="profile-header">
+                <div class="profile-avatar" id="adminProfileAvatar" aria-hidden="true">A</div>
+                <div>
+                    <h2 id="adminProfileName">Administrator</h2>
+                    <p>Administrator Sistem</p>
+                </div>
+            </div>
+            <form class="profile-form" id="adminProfileForm">
+                <h3>Informasi Akun</h3>
+                <label for="adminName">Nama lengkap
+                    <input id="adminName" name="name" type="text" autocomplete="name" required>
+                </label>
+                <label for="adminEmail">Email
+                    <input id="adminEmail" name="email" type="email" autocomplete="email" required>
+                </label>
+                <label for="adminPhone">Nomor telepon
+                    <input id="adminPhone" name="phone" type="tel" autocomplete="tel" placeholder="Masukkan nomor telepon">
+                </label>
+                <p class="profile-message" id="profileMessage" role="status" aria-live="polite" hidden></p>
+                <div class="profile-actions">
+                    <button class="profile-save-button" type="submit">Simpan Perubahan</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="../app.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

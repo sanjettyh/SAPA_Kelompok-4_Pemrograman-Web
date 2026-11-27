@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penanganan Kasus | Guru BK</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/sidebar.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="penanganankasus.css">
+</head>
+<body data-depth="1" data-page="penanganan" data-title="Penanganan Kasus">
+    <div id="sidebar-container"></div>
+    <main class="guru-main">
+        <div id="navbar-container"></div>
+        <section class="guru-page-heading"><h2>Penanganan Kasus</h2><p>Catat tindakan dan tindak lanjut untuk laporan yang ditangani profil Guru BK aktif.</p></section>
+        <section class="guru-panel">
+            <div class="guru-toolbar handling-toolbar">
+                <label class="guru-search"><span class="guru-visually-hidden">Cari penanganan</span><input id="handlingSearch" type="search" placeholder="Cari kode laporan, nama pelapor, atau kategori..."></label>
+                <label><span class="guru-visually-hidden">Filter status</span><select id="handlingFilter" class="guru-input"><option value="">Semua Status</option><option value="belum_ditangani">Belum ditangani</option><option value="sedang_ditangani">Sedang ditangani</option><option value="selesai">Selesai</option></select></label>
+                <button class="guru-secondary-button" id="resetHandlingFilters" type="button">Reset</button>
+                <button class="guru-button" id="addHandling" type="button">+ Tangani Laporan</button>
+            </div>
+            <div class="guru-table-wrap"><table class="guru-table handling-table"><thead><tr><th>Laporan</th><th>Kategori</th><th>Tanggal Penanganan</th><th>Status Kasus</th><th>Tindak Lanjut</th><th>Aksi</th></tr></thead><tbody id="handlingTable"></tbody></table></div>
+            <p class="guru-summary" id="handlingSummary" aria-live="polite"></p>
+        </section>
+    </main>
+    <div class="guru-modal handling-modal" id="handlingModal" hidden>
+        <section class="guru-dialog" role="dialog" aria-modal="true" aria-labelledby="handlingModalTitle">
+            <div class="guru-dialog-heading"><div><h2 id="handlingModalTitle">Penanganan Kasus</h2><p>Isi catatan tindakan dan tindak lanjut kasus.</p></div><button class="guru-close-button" id="closeHandling" type="button" aria-label="Tutup">×</button></div>
+            <form class="guru-form" id="handlingForm">
+                <input id="handlingId" type="hidden">
+                <label>Laporan<select id="handlingReport" required></select></label>
+                <div class="guru-form-columns">
+                    <label>Tanggal penanganan<input id="handlingDate" type="date"></label>
+                    <label>Status<select id="handlingStatus" required><option value="belum_ditangani">Belum ditangani</option><option value="sedang_ditangani">Sedang ditangani</option><option value="selesai">Selesai</option></select></label>
+                </div>
+                <label>Tindakan yang dilakukan<textarea id="actionTaken" rows="4" placeholder="Ceritakan tindakan yang sudah dilakukan..."></textarea></label>
+                <label>Rencana tindak lanjut<textarea id="followUp" rows="4" placeholder="Tuliskan rencana tindak lanjut..."></textarea></label>
+                <label>Catatan riwayat <span>(opsional)</span><textarea id="handlingNotes" rows="2" placeholder="Catatan perubahan penanganan"></textarea></label>
+                <p class="guru-form-error" id="handlingError" role="alert" hidden></p>
+                <div class="guru-modal-actions"><button class="guru-secondary-button" id="cancelHandling" type="button">Batal</button><button class="guru-button" type="submit">Simpan Penanganan</button></div>
+            </form>
+        </section>
+    </div>
+    <script type="module" src="../app.js"></script>
+    <script type="module" src="penanganankasus.js"></script>
+</body>
+</html>

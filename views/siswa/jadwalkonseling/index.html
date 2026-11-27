@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Konseling | Sahabat Sekolah</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="jadwalkonseling.css">
+</head>
+
+<body data-root="..">
+
+    <div id="navbarMount"></div>
+
+    <main class="main-content">
+
+        <div class="page-heading">
+            <span class="eyebrow">RUANG AMAN SEKOLAH</span>
+            <h1>Jadwal Konseling</h1>
+            <p>Lihat jadwal pendampingan bersama guru BK.</p>
+        </div>
+
+        <section class="card counseling-card">
+
+            <div class="card-heading">
+                <div>
+                    <h2>Jadwal Konseling Saya</h2>
+                    <p>Informasi sesi konselingmu.</p>
+                </div>
+
+                <span class="schedule-count" id="scheduleCount">
+                    0 Jadwal
+                </span>
+            </div>
+
+            <div id="sessionList"></div>
+
+            <div class="empty-state" id="scheduleEmpty">
+                Belum ada jadwal konseling.
+                <br>
+                Jadwal akan muncul setelah guru BK membuatnya.
+            </div>
+
+        </section>
+
+        <div class="card counseling-info">
+            <div class="info-icon">♡</div>
+            <div>
+                <h3>Butuh bantuan?</h3>
+                <p>
+                    Jika kamu membutuhkan pendampingan,
+                    silakan hubungi guru BK di sekolah.
+                </p>
+            </div>
+        </div>
+
+        <div id="footerMount"></div>
+
+    </main>
+
+    <script src="../app.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="jadwalkonseling.js"></script>
+
+</body>
+</html>

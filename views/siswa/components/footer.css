@@ -1,0 +1,40 @@
+
+/* ============================
+   FOOTER SAHABAT SEKOLAH
+============================ */
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+    border-top: 1px solid var(--line);
+
+    color: #a1a8b5;
+    font-size: 10px;
+
+    padding: 20px 2px 5px;
+    margin-top: 25px;
+}
+
+.site-footer p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.site-footer b {
+    color: #d77d91;
+}
+
+.footer-right {
+    color: #a1a8b5;
+}
+
+@media(max-width: 600px) {
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
